@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MEDICARE.IN</title>
+         <style>
+             body{background-image: url(bgn2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color:"white";}
+            center{padding-top: 4%;}
+            fieldset{
+                height: 80%; width:70%;
+                background-color:rgba(55, 236, 236, 0.8);
+                color: black;
+                text-align: left; }
+            span.d{overflow: hidden;background-color: rgb(117, 252, 195);border-style: solid;border-radius: 2mm;border-color: lightskyblue;}
+            span a {
+              color: rgb(37, 21, 82);
+              text-decoration: none;
+            }
+         </style>
+         
+    </head>
+    <body >
+       <center>
+           <h2 style="background-color: rgb(244, 245, 245);"><span class="d"><a href="brands.html">Home</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="d"><a href="medic.html">Register/Login</a></span></h2>
+        <br><br><br>
+            <fieldset>
+                <legend><b>UPLOAD PRESCRIPTION</b></legend>
+                Select : *<input type="file" id="nesc" name="fileupload" value="fileupload" id="fileupload" required>
+                <br><br>
+                upload : <input type="image" src="send.webp" alt="Submit" width="30">
+            </fieldset>
+            <br><br>
+        <fieldset>
+            <legend><b>CUSTOMER DETAILS</b></legend>
+            Name : *<input id="name"  type="text" required><br><br>
+            Age : <input type="number"><br><br>
+            Mobile : *<input id="num"  type="number" min="1000000000" max="9999999999" required><br><br>
+            Doctor's Name: <input type="text"><br><br>
+            Hospital name: <input type="text"><br><br>
+            Hospital Address: <textarea rows="2" cols=15"></textarea><br><br>
+            <h3><b>Allergic to any medicine :</b></h3>
+            <select align="center" > 
+                <option value="NO" >NO</option>
+                <option value="YES" >YES</option>
+            </select><br><br>
+            Address of Delivery : <textarea rows="3" cols="20"></textarea><br><br>
+            <input type="checkbox" id="check" required>*hereby,i declare above given details is true <br><br>
+            <input type="submit" onclick="func()" value="SUBMIT"><br>
+            
+
+        </fieldset>
+
+       </center>
+       <script>
+           window.alert("UPLOAD YOUR PRESCRIPTION HERE\n ( * -need to be filled compulsorily)")
+           function func()
+           {
+               if(document.getElementById("nesc").validity.valueMissing)
+               {
+                   window.alert(" \n UPLOAD PRESCRIPTION ");
+               }
+               else if(document.getElementById("name").validity.valueMissing)
+               {
+                   window.alert(" \nDO FILL THE MANDATORY FIELDS(*) ");
+               }
+               else if(document.getElementById("num").validity.rangeUnderflow || document.getElementById("num").validity.rangeOverflow)
+               {
+                   window.alert("\n PLEASE ENTER A VALID PHONE NUMBER ");
+               }
+               else if(document.getElementById("check").validity.valueMissing)
+               {
+                   window.alert("\n FILL THE CHECK BOX  ");
+               }
+               else 
+               {
+                   window.alert("\n SUCCESSFULY UPLOADED!!!  ");
+               }
+           }
+       </script>
+        
+
+    </body>
+</html>
