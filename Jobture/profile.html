@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jobture.Com</title>
+         <style>
+             .header
+        {
+            background-color: blanchedalmond;
+            text-align: center;
+            padding: 1px;
+
+        }
+        .cdiv
+        {
+            border: 2px solid grey;
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            background-color:whitesmoke;
+            font-size: large;
+            
+        }
+        
+        a{
+            text-decoration: none;
+            color: rgb(5, 134, 173);
+            font-size: small;
+        }
+            input
+             {
+                    border: none;
+                    border-bottom: 2px solid red;
+                    background-color:whitesmoke;
+                    width: 60%;
+            }
+            button
+            {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                text-align: center;
+            }
+            button:hover
+            {
+                opacity:0.7;
+            }
+            .cancel
+            {
+                width:auto;
+                padding: 12px 14px;
+                background-color: orangered;
+            }
+            
+
+         </style>
+         
+    </head>
+    <body >
+        <div class="header"><h1 style="font-family: gabriola;">Jobture.Com</h1>
+            <h6>we find you jobs better and faster!</h6>          
+            <hr></div><br><a href="jobture.html">HOME</a><br>
+       <center>
+        <div class="cdiv"><br><br>     
+           Enter User Name* : <input id="name"  type="text" required><br><br>
+           Enter Phone Number* : <input id="num"  type="tel" required><br><br>
+           Enter Email ID* : <input id="mail"  type="email" required><br><br>
+           Experience(in years) : <input type="range"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5-10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10-15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15< <br>
+           set Password* : <input  id="pass" type="password" required><BR><br><br>
+            <button type="submit" onclick="func()" value="SUBMIT">SUBMIT</button><button type="button" value="CANCEL" onclick="funct()" class="cancel">CANCEL</button><br>
+            <a href="page.html" >ALREADY CREATED?</a><BR><br>
+            </div>
+       </center>
+       <script>
+           function func()
+           {
+               if(document.getElementById("name").validity.valueMissing||document.getElementById("num").validity.valueMissing)
+               {
+                   window.alert(" \n FILL ALL MANDATORY FIELDS ");
+               }
+               else if((document.getElementById("res").validity.valueMissing||document.getElementById("mail").validity.valueMissing)||document.getElementById("pass").validity.valueMissing)
+               {
+                window.alert(" \n FILL ALL MANDATORY FIELDS ");
+               }
+               else 
+               {
+                   window.alert("\n SUCCESSFULY REGISTERED!!!  ");
+                   document.location.reload();
+               }
+           }
+           function funct()
+           {
+               window.history.back();
+           }
+       </script>
+        
+
+    </body>
+</html>

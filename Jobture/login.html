@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jobture.Com</title>
+         <style>
+             .header
+        {
+            background-color: blanchedalmond;
+            text-align: center;
+            padding: 1px;
+
+        }
+        .cdiv
+        {
+            border: 2px solid grey;
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            background-color:whitesmoke;
+            font-size: large;
+            
+        }
+        
+        a{
+            text-decoration: none;
+            color: rgb(5, 134, 173);
+            font-size: small;
+        }
+            input
+             {
+                    border: none;
+                    border-bottom: 2px solid red;
+                    background-color:whitesmoke;
+                    width: 60%;
+            }
+            button
+            {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                text-align: center;
+            }
+            button:hover
+            {
+                opacity:0.7;
+            }
+            .cancel
+            {
+                width:auto;
+                padding: 12px 14px;
+                background-color: orangered;
+            }
+            
+
+         </style>
+         
+    </head>
+    <body >
+        <div class="header"><h1 style="font-family: gabriola;">Jobture.Com</h1>
+            <h6>we find you jobs better and faster!</h6>          
+            <hr></div><br><br>
+       <center>
+        <div class="cdiv"><br><br>     
+            User Name* : <input id="name"  type="text" required><br><br>
+            Password* : *<input  id="pass" type="password" required><BR><br><br>
+            <button type="submit" onclick="func()" value="SUBMIT">SUBMIT</button><button type="button" value="CANCEL" onclick="funct()" class="cancel">CANCEL</button><br>
+            <a href="page1.html" >FORGOT PASSWORD?</a><BR><br>
+            </div>
+       </center>
+       <script>
+           function func()
+           {
+               if(document.getElementById("name").validity.valueMissing||document.getElementById("pass").validity.valueMissing)
+               {
+                   window.alert(" \n ENTER USERNAME AND PASSWORD TO LOGIN. ");
+               }
+               else 
+               {
+                   window.alert("\n SUCCESSFULY REGISTERED!!!  ");
+                   document.location.reload();
+               }
+           }
+           function funct()
+           {
+               window.history.back();
+           }
+       </script>
+        
+
+    </body>
+</html>
